@@ -45,6 +45,8 @@ void setup() {
 void loop() {
     if (input.available()) {
         Event event = input.getEvent();
+        Serial.print("event:");
+        Serial.println(event);
         manager.handleEvent(event);
         manager.update();
         lastUpdateTime = millis();
